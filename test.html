@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://unpkg.com/hydra-synth"></script>
+  <script>
+    // create a new hydra-synth instance
+    var hydra = new Hydra({ detectAudio: false })
+    osc(11, .05, Math.PI/5).rotate(.4).out(o2)
+    noise(1.9, .05).out(o1)
+    gradient(0, 30).kaleid(12).out(o3)
+
+    s0.initCam(0) // initialize a webcam in source buffer s0
+    src(s0).diff(o2, 3).modulateHue(o2).out(o0) // set the source of o0 to render the buffer containing the webcam
+  </script>
+</body>
+
+</html>

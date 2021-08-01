@@ -1,0 +1,24 @@
+{
+  "name": "hydra-sandbox",
+  "version": "1.0.0",
+  "description": "just playing around with Hydra, seeing what I can come up with :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieljhawn/hydra-sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danieljhawn/hydra-sandbox/issues"
+  },
+  "homepage": "https://github.com/danieljhawn/hydra-sandbox#readme",
+  "dependencies": {
+    "hydra-synth": "^1.3.8"
+  }
+}
