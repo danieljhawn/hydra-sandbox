@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://hydra-scrollable-webpage.glitch.me/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>hydra inside a webpage</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="./hydra inside a webpage_files/style.css">
+
+    <!-- import the latest version of hydra synth-->
+    <script src="./hydra inside a webpage_files/hydra-synth"></script>
+  </head>
+  <body>
+    <div id="main">
+      <h1>hydra inside a webpage</h1>
+
+      <div class="spacer-small"></div>
+
+      <p>↓continue scrolling↓</p>
+      
+      <div class="spacer-small"></div>
+      
+      <code>shape(99).scale(1,1,()=&gt;window.innerWidth/window.innerHeight).mult(osc(20,0.1,2)).modulateScale(osc(1,2).invert(),0.5,0.5).out()</code>
+
+      <div class="spacer"></div>
+
+      <code>solid(0,0,0).layer(src(o0).scale(()=>time/9).mask(shape(99).scale(1,1,()=&gt;window.innerWidth/window.innerHeight))).blend(shape(99).scale(1,1,()=&gt;window.innerWidth/window.innerHeight).mult(osc(20,0.1,2)),0.1).out()</code>
+
+      <div class="spacer"></div>
+
+      <code>src(o0).modulateHue(src(o0).scale(1.01),1).out()</code>
+
+      <div class="spacer"></div>
+
+      <code>src(o0).scale(1.01).out()</code>
+
+      <div class="spacer"></div>
+
+      <code>src(o0).modulateRotate(src(o0).scale(1.01).hue(()=&gt;time/9).brightness(-0.3),.01).out()</code>
+
+      <div class="spacer"></div>
+
+      <code>src(o0).modulatePixelate(src(o0).hue(()=&gt;time/9).r().contrast(2).pixelate(32,32),1024,8).out()</code>
+
+      <div class="spacer"></div>
+
+      <code>src(o0).scale(0.99).out()</code>
+
+      <div class="spacer"></div>
+    </div>
+
+    <script src="./script.js"></script><canvas width="1685" height="1197" id="hydraCanvas"></canvas>
+  
+
+</body></html>
